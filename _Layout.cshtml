@@ -27,17 +27,17 @@
             $(window).scroll(function () { if ($(this).scrollTop() > 0) { $('#scroller').fadeIn(); } else { $('#scroller').fadeOut(); } });
             $('#scroller').click(function () { $('body,html').animate({ scrollTop: 0 }, 400); return false; });
         });</script>
-    <h1>Hello GitHub</h1>
+    <h1>Hello GitLab</h1>
 </head>
 <body>
     <div id="head" style="background-color: red" class="row">
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
+            <div class="navbar-header">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <span class="hidden-xs">
-                            <img src="/fonts/candy-logo.svg" width="50" height="30" class="d-inline-block align-top" alt="">
-                            @Html.ActionLink("Helgin Candy Shop", "List", "Sweet", new { area = "" }, new { @class = "navbar-brand" })
+                    <a class="container" href="#">
+                        <span class="hidden-sm">
+                            <img src="/fonts/candy-logo.svg" width="500" height="300" class="d-inline-block align-top" alt="">
+                            @Html.ActionLink("Helgin Candy Shop", "List", "List", new { area = "" }, new { @class = "navbar-brand" })
                         </span>
                         <div class="visible-xs">Candy</div>
                         <div class="visible-xs">Shop</div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("О программе", "About", "Sweet")</li>
+                        <li>@Html.ActionLink("О программе", "Contact", "Sweet")</li>
                         <li>@Html.ActionLink("Контакт", "Contact", "Sweet")</li>
                         @if (Session["UserId"] != null)
                         {
