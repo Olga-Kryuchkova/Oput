@@ -32,12 +32,12 @@
 <body>
     <div id="head" style="background-color: red" class="row">
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
+            <div class="navbar-header">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <span class="hidden-xs">
+                    <a class="container" href="#">
+                        <span class="hidden-sm-3">
                             <img src="/fonts/candy-logo.svg" width="50" height="30" class="d-inline-block align-top" alt="">
-                            @Html.ActionLink("Helgin Candy Shop", "List", "Sweet", new { area = "" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink("Helgin Candy List", "List", "Sweet", new { area = "" }, new { @class = "navbar-brand" })
                         </span>
                         <div class="visible-xs">Candy</div>
                         <div class="visible-xs">Shop</div>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("О программе", "About", "Sweet")</li>
+                        <li>@Html.ActionLink("Контакт", "About", "Sweet")</li>
                         <li>@Html.ActionLink("Контакт", "Contact", "Sweet")</li>
                         @if (Session["UserId"] != null)
                         {
